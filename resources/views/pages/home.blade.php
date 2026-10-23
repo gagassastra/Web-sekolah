@@ -340,7 +340,7 @@
                     <div class="bg-slate-50 rounded-xl p-5 border border-slate-200/80 hover:shadow-md transition text-center flex flex-col items-center">
                         <div class="w-24 h-24 rounded-full overflow-hidden bg-slate-200 border-2 border-blue-600 mb-4 shadow-sm flex items-center justify-center">
                             @if($tutor->foto)
-                                <img src="{{ asset($tutor->foto) }}" alt="{{ $tutor->nama }}" class="w-full h-full object-cover">
+                                <img src="{{ $tutor->foto_url }}" alt="{{ $tutor->nama }}" class="w-full h-full object-cover">
                             @else
                                 <div class="w-full h-full bg-blue-900 text-white font-bold text-xl flex items-center justify-center">
                                     {{ substr($tutor->nama, 0, 1) }}

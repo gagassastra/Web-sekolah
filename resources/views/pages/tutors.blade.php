@@ -44,7 +44,7 @@
                         <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-md transition text-center flex flex-col items-center">
                             <div class="w-24 h-24 rounded-full overflow-hidden bg-slate-200 border-2 border-blue-600 mb-4 shadow-sm flex items-center justify-center">
                                 @if($item->foto)
-                                    <img src="{{ asset($item->foto) }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
+                                    <img src="{{ $item->foto_url }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-blue-900 text-white font-bold text-2xl flex items-center justify-center">
                                         {{ substr($item->nama, 0, 1) }}
@@ -74,7 +74,7 @@
                             <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-md transition text-center flex flex-col items-center">
                                 <div class="w-24 h-24 rounded-full overflow-hidden bg-slate-200 border-2 border-blue-600 mb-4 shadow-sm flex items-center justify-center">
                                     @if($item->foto)
-                                        <img src="{{ asset($item->foto) }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
+                                        <img src="{{ $item->foto_url }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
                                     @else
                                         <div class="w-full h-full bg-blue-900 text-white font-bold text-2xl flex items-center justify-center">
                                             {{ substr($item->nama, 0, 1) }}
@@ -104,7 +104,7 @@
                         <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition text-center flex flex-col items-center">
                             <div class="w-20 h-20 rounded-full overflow-hidden bg-slate-100 border-2 border-slate-200 mb-3 shadow-xs flex items-center justify-center">
                                 @if($item->foto)
-                                    <img src="{{ asset($item->foto) }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
+                                    <img src="{{ $item->foto_url }}" alt="{{ $item->nama }}" class="w-full h-full object-cover">
                                 @else
                                     <div class="w-full h-full bg-gradient-to-br from-blue-700 to-slate-800 text-white font-bold text-xl flex items-center justify-center">
                                         {{ substr($item->nama, 0, 1) }}

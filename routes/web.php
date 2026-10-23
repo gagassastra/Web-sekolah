@@ -76,6 +76,26 @@ Route::get('/ujian-cbt', [ExamPortalController::class, 'index'])->name('exam.por
 
 /*
 |--------------------------------------------------------------------------
+| Fallback Serve Uploaded Files
+|--------------------------------------------------------------------------
+| Jika symlink public/storage tidak ada di hosting (php artisan storage:link
+| tidak dijalankan / tidak didukung), file upload tetap bisa ditampilkan lewat
+| route ini. Bila symlink ada, web server melayani file langsung tanpa route ini.
+*/
+Route::get('/storage/{path}', function (string $path) {
+    $root = realpath(storage_path('app/public'));
+    $file = $root ? realpath($root . DIRECTORY_SEPARATOR . $path) : false;
+
+    abort_unless(
+        $file && is_file($file) && str_starts_with($file, $root . DIRECTORY_SEPARATOR),
+        404
+    );
+
+    return response()->file($file, ['Cache-Control' => 'public, max-age=86400']);
+})->where('path', '.*')->name('storage.fallback');
+
+/*
+|--------------------------------------------------------------------------
 | Authentication Routes
 |--------------------------------------------------------------------------
 */

@@ -36,6 +36,7 @@ class Tutor extends Model
             return 'https://ui-avatars.com/api/?background=1e3a8a&color=fff&bold=true&name=' . urlencode($this->nama ?? 'T');
         }
 
-        return str_starts_with($this->foto, 'http') ? $this->foto : asset(ltrim($this->foto, '/'));
+        // Gunakan path relatif ke root agar tidak bergantung pada APP_URL / skema http-https hosting
+        return str_starts_with($this->foto, 'http') ? $this->foto : '/' . ltrim($this->foto, '/');
     }
 }
