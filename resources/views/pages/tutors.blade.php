@@ -29,11 +29,7 @@
             <div x-data="{
                     active: 0,
                     timer: null,
-                    slides: [
-                        { src: '{{ asset('images/tutor/dewan-tutor-1.jpg') }}', caption: 'Dewan Tutor dan Pengelola PKBM AL-QUDWAH Bersama Mewujudkan Pendidikan Berkualitas di Campaka Cianjur' },
-                        { src: '{{ asset('images/tutor/dewan-tutor-2.jpg') }}', caption: 'Kebersamaan Dewan Tutor dan Pengelola PKBM AL-QUDWAH' },
-                        { src: '{{ asset('images/tutor/dewan-tutor-3.jpg') }}', caption: 'Dedikasi Tutor dan Pengelola dalam Mendampingi Warga Belajar' }
-                    ],
+                    slides: @js($slides),
                     next() { this.active = (this.active + 1) % this.slides.length },
                     prev() { this.active = (this.active - 1 + this.slides.length) % this.slides.length },
                     start() { this.stop(); this.timer = setInterval(() => this.next(), 4000) },

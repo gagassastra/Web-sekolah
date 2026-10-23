@@ -26,7 +26,7 @@ class Gallery extends Model
     {
         $path = $this->image_path ?: 'images/kegiatan/pembelajaran-tatap-muka-1.jpg';
 
-        return str_starts_with($path, 'http') ? $path : asset(ltrim($path, '/'));
+        return str_starts_with($path, 'http') ? $path : '/' . ltrim($path, '/');
     }
 
     /**
