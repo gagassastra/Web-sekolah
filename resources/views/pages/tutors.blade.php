@@ -25,11 +25,53 @@
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
-            <!-- FOTO BERSAMA DEWAN TUTOR -->
-            <div class="rounded-2xl overflow-hidden border border-slate-200 aspect-[21/9] bg-slate-900 relative shadow-sm">
-                <img src="{{ asset('images/tutor/dewan-tutor-1.jpg') }}" alt="Dewan Tutor PKBM AL-QUDWAH" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
-                    <p class="text-white text-xs sm:text-sm font-semibold">Dewan Tutor dan Pengelola PKBM AL-QUDWAH Bersama Mewujudkan Pendidikan Berkualitas di Campaka Cianjur</p>
+            <!-- SLIDE FOTO BERSAMA DEWAN TUTOR & PENGELOLA (otomatis) -->
+            <div x-data="{
+                    active: 0,
+                    timer: null,
+                    slides: [
+                        { src: '{{ asset('images/tutor/dewan-tutor-1.jpg') }}', caption: 'Dewan Tutor dan Pengelola PKBM AL-QUDWAH Bersama Mewujudkan Pendidikan Berkualitas di Campaka Cianjur' },
+                        { src: '{{ asset('images/tutor/dewan-tutor-2.jpg') }}', caption: 'Kebersamaan Dewan Tutor dan Pengelola PKBM AL-QUDWAH' },
+                        { src: '{{ asset('images/tutor/dewan-tutor-3.jpg') }}', caption: 'Dedikasi Tutor dan Pengelola dalam Mendampingi Warga Belajar' }
+                    ],
+                    next() { this.active = (this.active + 1) % this.slides.length },
+                    prev() { this.active = (this.active - 1 + this.slides.length) % this.slides.length },
+                    start() { this.stop(); this.timer = setInterval(() => this.next(), 4000) },
+                    stop() { if (this.timer) { clearInterval(this.timer); this.timer = null } }
+                 }"
+                 x-init="start()"
+                 @mouseenter="stop()" @mouseleave="start()"
+                 class="rounded-2xl overflow-hidden border border-slate-200 aspect-[21/9] bg-slate-900 relative shadow-sm"
+                 aria-roledescription="carousel" aria-label="Foto Dewan Tutor dan Pengelola">
+
+                <template x-for="(slide, index) in slides" :key="index">
+                    <div class="absolute inset-0 transition-opacity duration-700 ease-in-out"
+                         :class="active === index ? 'opacity-100 z-10' : 'opacity-0 z-0'"
+                         :aria-hidden="active !== index">
+                        <img :src="slide.src" :alt="slide.caption" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+                            <p class="text-white text-xs sm:text-sm font-semibold pr-16 sm:pr-0" x-text="slide.caption"></p>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Tombol sebelumnya / berikutnya -->
+                <button type="button" @click="prev()" aria-label="Foto sebelumnya"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button type="button" @click="next()" aria-label="Foto berikutnya"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <!-- Indikator -->
+                <div class="absolute bottom-4 right-4 z-20 flex items-center gap-2">
+                    <template x-for="(slide, index) in slides" :key="'dot' + index">
+                        <button type="button" @click="active = index" :aria-label="'Foto ' + (index + 1)"
+                                class="h-2 rounded-full transition-all duration-300"
+                                :class="active === index ? 'w-6 bg-amber-400' : 'w-2 bg-white/60 hover:bg-white'"></button>
+                    </template>
                 </div>
             </div>
 
