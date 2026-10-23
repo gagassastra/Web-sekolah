@@ -16,7 +16,7 @@
                     <!-- BADGE -->
                     <div class="inline-flex items-center space-x-2 bg-blue-900/60 border border-blue-700/50 px-3.5 py-1.5 rounded-full text-xs font-semibold text-blue-200">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span>Resmi Terdaftar Kemdikbudristek • NPSN {{ $profile->npsn ?? 'P9998654' }}</span>
+                        <span>Resmi Terdaftar Kemdikbudristek • NPSN {{ $profile->npsn ?? 'P9998654' }} • Terakreditasi C</span>
                     </div>
 
                     <!-- HEADLINE -->
@@ -154,6 +154,10 @@
                             <div class="flex justify-between py-1 border-b border-slate-200/60">
                                 <dt class="text-slate-500 font-medium">NPSN</dt>
                                 <dd class="text-blue-950 font-bold font-mono">{{ $profile->npsn ?? 'P9998654' }}</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-200/60">
+                                <dt class="text-slate-500 font-medium">Akreditasi</dt>
+                                <dd class="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Terakreditasi C</dd>
                             </div>
                             <div class="flex justify-between py-1 border-b border-slate-200/60">
                                 <dt class="text-slate-500 font-medium">Bentuk Pendidikan</dt>

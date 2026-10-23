@@ -218,7 +218,7 @@
                         <img src="{{ asset('images/logo.png') }}" alt="Logo PKBM AL-QUDWAH" class="h-12 w-auto bg-white p-1 rounded-full">
                         <div>
                             <h3 class="text-base font-bold text-white tracking-wide">PKBM AL-QUDWAH</h3>
-                            <p class="text-xs text-amber-400 font-medium">NPSN: {{ $schoolProfile->npsn ?? 'P9998654' }}</p>
+                            <p class="text-xs text-amber-400 font-medium">NPSN: {{ $schoolProfile->npsn ?? 'P9998654' }} &bull; Terakreditasi C</p>
                         </div>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed">

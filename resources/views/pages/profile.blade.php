@@ -96,6 +96,10 @@
                                 <dd class="font-bold font-mono text-blue-700">{{ $profile->npsn ?? 'P9998654' }}</dd>
                             </div>
                             <div class="flex justify-between py-1 border-b border-slate-200/60">
+                                <dt class="text-slate-500">Akreditasi</dt>
+                                <dd class="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Terakreditasi C</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-200/60">
                                 <dt class="text-slate-500">Bentuk Pendidikan</dt>
                                 <dd class="font-medium text-slate-800">PKBM (Kesetaraan)</dd>
                             </div>
