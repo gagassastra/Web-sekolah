@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Warna utama (biru) - dipakai tombol, link, badge, fokus form */
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+    --color-primary-950: #172554;
+
+    /* Warna gelap (navy) - dipakai header halaman, sidebar admin, footer */
+    --color-navy-50: #f2f6fc;
+    --color-navy-100: #e1eaf7;
+    --color-navy-200: #c3d3ee;
+    --color-navy-300: #94b0de;
+    --color-navy-400: #5f87c7;
+    --color-navy-500: #3d65a8;
+    --color-navy-600: #2e4f89;
+    --color-navy-700: #263f6e;
+    --color-navy-800: #1c2f55;
+    --color-navy-900: #12223f;
+    --color-navy-950: #0a1429;
+
+    /* Warna aksen (emas) - dipakai highlight, label, tombol penting */
+    --color-gold-50: #fffbeb;
+    --color-gold-100: #fef3c7;
+    --color-gold-200: #fde68a;
+    --color-gold-300: #fcd34d;
+    --color-gold-400: #fbbf24;
+    --color-gold-500: #f59e0b;
+    --color-gold-600: #d97706;
+    --color-gold-700: #b45309;
+    --color-gold-800: #92400e;
+    --color-gold-900: #78350f;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    ::selection {
+        background-color: var(--color-primary-600);
+        color: #fff;
+    }
+
+    /* Scrollbar halus */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-slate-300) transparent;
+    }
+
+    /* Fokus form yang konsisten */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+    }
+}
+
+@layer components {
+    /* Pola titik halus untuk latar header halaman */
+    .bg-pattern {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+
+    .bg-pattern-light {
+        background-image: radial-gradient(rgba(30, 58, 138, 0.08) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+}
