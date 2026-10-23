@@ -5,9 +5,19 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class GalleryController extends Controller
 {
+    /** Daftar kategori galeri yang tersedia pada dropdown. */
+    private const CATEGORIES = [
+        'Kegiatan Pembelajaran',
+        'Upacara & Kepramukaan',
+        'Dewan Tutor & Pengelola',
+        'Warga Belajar & Kebersamaan',
+        'Dokumen Lembaga',
+    ];
+
     public function index(Request $request)
     {
         $query = Gallery::query();
@@ -24,13 +34,7 @@ class GalleryController extends Controller
 
     public function create()
     {
-        $defaultCategories = [
-            'Kegiatan Pembelajaran',
-            'Upacara & Kepramukaan',
-            'Dewan Tutor & Pengelola',
-            'Warga Belajar & Kebersamaan',
-            'Dokumen Lembaga',
-        ];
+        $defaultCategories = self::CATEGORIES;
         return view('admin.galleries.create', compact('defaultCategories'));
     }
 
@@ -38,7 +42,7 @@ class GalleryController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'category' => 'required|string|max:100',
+            'category' => ['required', 'string', 'max:100', Rule::in(self::CATEGORIES)],
             'caption' => 'nullable|string',
             'event_date' => 'nullable|date',
             'urutan' => 'nullable|integer',
@@ -59,13 +63,7 @@ class GalleryController extends Controller
 
     public function edit(Gallery $gallery)
     {
-        $defaultCategories = [
-            'Kegiatan Pembelajaran',
-            'Upacara & Kepramukaan',
-            'Dewan Tutor & Pengelola',
-            'Warga Belajar & Kebersamaan',
-            'Dokumen Lembaga',
-        ];
+        $defaultCategories = self::CATEGORIES;
         return view('admin.galleries.edit', compact('gallery', 'defaultCategories'));
     }
 
@@ -73,7 +71,7 @@ class GalleryController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'category' => 'required|string|max:100',
+            'category' => ['required', 'string', 'max:100', Rule::in(array_merge(self::CATEGORIES, [$gallery->category]))],
             'caption' => 'nullable|string',
             'event_date' => 'nullable|date',
             'urutan' => 'nullable|integer',

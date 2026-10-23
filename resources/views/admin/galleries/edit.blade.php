@@ -39,13 +39,15 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label class="block font-bold text-slate-700 uppercase mb-1">Kategori Galeri *</label>
-                    <input list="category-options" name="category" value="{{ old('category', $gallery->category) }}" required
-                           class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500">
-                    <datalist id="category-options">
+                    <select name="category" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500">
+                        @php $selectedCategory = old('category', $gallery->category); @endphp
+                        @if($selectedCategory && !in_array($selectedCategory, $defaultCategories))
+                            <option value="{{ $selectedCategory }}" selected>{{ $selectedCategory }}</option>
+                        @endif
                         @foreach($defaultCategories as $def)
-                            <option value="{{ $def }}">
+                            <option value="{{ $def }}" {{ $selectedCategory == $def ? 'selected' : '' }}>{{ $def }}</option>
                         @endforeach
-                    </datalist>
+                    </select>
                 </div>
                 <div>
                     <label class="block font-bold text-slate-700 uppercase mb-1">Tanggal Kegiatan</label>
