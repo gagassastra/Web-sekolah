@@ -30,7 +30,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div class="lg:col-span-4 flex flex-col items-center text-center space-y-3">
                         <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-4 border-white shadow-md bg-slate-200">
-                            <img src="{{ asset('images/tutor/dewan-tutor-1.jpg') }}" alt="Kepala PKBM AL-QUDWAH" class="w-full h-full object-cover">
+                            <img src="{{ !empty($profile->foto_kepala) ? $profile->foto_kepala : asset('images/tutor/dewan-tutor-1.jpg') }}" alt="Kepala PKBM AL-QUDWAH" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h3 class="font-extrabold text-blue-950 text-base">{{ $profile->kepala_sekolah ?? 'Elis Masridah' }}</h3>

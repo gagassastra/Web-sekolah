@@ -130,7 +130,7 @@
                     </blockquote>
                     <div class="flex items-center space-x-4 pt-2">
                         <div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200 border-2 border-blue-600 flex-shrink-0">
-                            <img src="{{ asset('images/tutor/dewan-tutor-1.jpg') }}" alt="Kepala PKBM AL-QUDWAH" class="w-full h-full object-cover">
+                            <img src="{{ !empty($profile->foto_kepala) ? $profile->foto_kepala : asset('images/tutor/dewan-tutor-1.jpg') }}" alt="Kepala PKBM AL-QUDWAH" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-bold text-blue-950 text-sm">{{ $profile->kepala_sekolah ?? 'Elis Masridah' }}</h4>
