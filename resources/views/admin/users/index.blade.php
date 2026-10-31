@@ -35,8 +35,12 @@
                         <tr class="hover:bg-slate-50/80 transition">
                             <td class="px-6 py-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-9 h-9 rounded-full bg-navy-900 text-white flex items-center justify-center font-bold text-xs shrink-0">
-                                        {{ substr($user->name, 0, 1) }}
+                                    <div class="w-9 h-9 rounded-full bg-navy-900 text-white flex items-center justify-center font-bold text-xs shrink-0 overflow-hidden">
+                                        @if($user->avatar_url)
+                                            <img src="{{ $user->avatar_url }}" alt="{{ $user->name }}" class="w-full h-full object-cover">
+                                        @else
+                                            {{ substr($user->name, 0, 1) }}
+                                        @endif
                                     </div>
                                     <div>
                                         <span class="block font-bold text-navy-900 text-xs">{{ $user->name }}</span>

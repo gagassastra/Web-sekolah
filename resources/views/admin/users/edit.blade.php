@@ -26,9 +26,24 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.users.update', $user->id) }}" method="POST" class="p-6 sm:p-8 space-y-5 text-xs">
+        <form action="{{ route('admin.users.update', $user->id) }}" method="POST" enctype="multipart/form-data" class="p-6 sm:p-8 space-y-5 text-xs">
             @csrf
             @method('PUT')
+
+            <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-navy-900 text-white flex items-center justify-center font-bold text-xl overflow-hidden shrink-0">
+                    @if($user->avatar_url)
+                        <img src="{{ $user->avatar_url }}" alt="{{ $user->name }}" class="w-full h-full object-cover">
+                    @else
+                        {{ substr($user->name, 0, 1) }}
+                    @endif
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Foto Profil</label>
+                    <input type="file" name="avatar" accept="image/*" class="text-xs text-slate-600 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100">
+                    <p class="text-[10px] text-slate-400 mt-1">JPG/PNG/WEBP, maks. 2 MB. Kosongkan jika tidak ingin mengubah.</p>
+                </div>
+            </div>
 
             <div>
                 <label class="block font-bold text-slate-700 uppercase mb-1">Nama Lengkap *</label>

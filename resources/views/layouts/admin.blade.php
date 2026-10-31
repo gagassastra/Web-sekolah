@@ -174,8 +174,12 @@
             <div class="p-4 border-t border-white/10 bg-navy-950/60">
                 <div class="flex items-center justify-between gap-3">
                     <div class="flex items-center gap-3 min-w-0">
-                        <div class="w-9 h-9 rounded-full bg-primary-600 flex items-center justify-center font-bold text-xs text-white shrink-0">
-                            {{ substr(auth()->user()->name ?? 'A', 0, 1) }}
+                        <div class="w-9 h-9 rounded-full bg-primary-600 flex items-center justify-center font-bold text-xs text-white shrink-0 overflow-hidden">
+                            @if(auth()->user()->avatar_url)
+                                <img src="{{ auth()->user()->avatar_url }}" alt="{{ auth()->user()->name }}" class="w-full h-full object-cover">
+                            @else
+                                {{ substr(auth()->user()->name ?? 'A', 0, 1) }}
+                            @endif
                         </div>
                         <div class="min-w-0">
                             <span class="block text-xs font-bold text-white truncate">{{ auth()->user()->name ?? 'Administrator' }}</span>
@@ -227,8 +231,12 @@
 
                     <!-- User Initials / Profile -->
                     <div class="flex items-center gap-2 pl-2 border-l border-slate-200">
-                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs font-bold">
-                            {{ substr(auth()->user()->name ?? 'A', 0, 1) }}
+                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-xs font-bold overflow-hidden">
+                            @if(auth()->user()->avatar_url)
+                                <img src="{{ auth()->user()->avatar_url }}" alt="{{ auth()->user()->name }}" class="w-full h-full object-cover">
+                            @else
+                                {{ substr(auth()->user()->name ?? 'A', 0, 1) }}
+                            @endif
                         </div>
                     </div>
                 </div>

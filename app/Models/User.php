@@ -63,4 +63,26 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'author_id');
     }
+
+    /**
+     * URL foto profil pengguna (null jika tidak ada, tampilkan inisial).
+     * Urutan: avatar akun -> foto di data Tutor dengan nama yang sama.
+     */
+    public function getAvatarUrlAttribute(): ?string
+    {
+        $foto = $this->avatar;
+
+        if (empty($foto) && !empty($this->name)) {
+            $foto = Tutor::whereRaw('LOWER(nama) = ?', [mb_strtolower(trim($this->name))])
+                ->whereNotNull('foto')
+                ->where('foto', '!=', '')
+                ->value('foto');
+        }
+
+        if (empty($foto)) {
+            return null;
+        }
+
+        return str_starts_with($foto, 'http') ? $foto : '/' . ltrim($foto, '/');
+    }
 }
