@@ -75,6 +75,21 @@
                     <strong>Minggu:</strong> Layanan Daring / Pembelajaran Terjadwal
                 </p>
             </div>
+
+            <!-- Card Instagram -->
+            <div class="md:col-span-2 lg:col-span-4 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-navy-900 text-sm mb-1">Media Sosial Instagram</h3>
+                    <p class="text-xs text-slate-600">Ikuti kegiatan dan informasi terbaru PKBM AL-QUDWAH di Instagram.</p>
+                </div>
+                <a href="https://www.instagram.com/pkbm_alqudwah/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white text-xs font-bold hover:opacity-90 transition">
+                    <i class="fa-brands fa-instagram"></i> @@pkbm_alqudwah
+                </a>
+            </div>
         </div>
 
         <!-- Form and Map Grid -->

@@ -295,6 +295,17 @@
                             <span>{{ $schoolProfile->jam_layanan ?? 'Senin - Sabtu: 08.00 - 16.00 WIB' }}</span>
                         </div>
                     </div>
+                    <!-- MEDIA SOSIAL -->
+                    <div class="pt-2">
+                        <p class="text-xs font-semibold text-slate-300 mb-2">Ikuti Kami</p>
+                        <a href="https://www.instagram.com/pkbm_alqudwah/" target="_blank" rel="noopener noreferrer" aria-label="Instagram PKBM AL-QUDWAH"
+                           class="inline-flex items-center gap-2.5 text-xs text-slate-300 hover:text-white transition group">
+                            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-base group-hover:scale-110 transition">
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                            <span>@@pkbm_alqudwah</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
