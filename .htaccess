@@ -18,6 +18,11 @@
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
+    # Serve static assets (Vite build, images, storage) from /public
+    # karena document root hosting mengarah ke root project
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+    RewriteRule ^((build|images|storage)/.+)$ public/$1 [L]
+
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
