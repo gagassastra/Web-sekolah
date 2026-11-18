@@ -44,9 +44,6 @@
                 </div>
                 <h3 class="font-bold text-navy-900 text-sm mb-2">WhatsApp / Telepon</h3>
                 <p class="text-xs text-slate-600 mb-2">Hubungi admin resmi:</p>
-                <a href="https://wa.me/6285864183271" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-600 hover:underline block mb-1">
-                    0858-6418-3271
-                </a>
                 <a href="https://wa.me/6285722499957" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-600 hover:underline block">
                     0857-2249-9957
                 </a>
@@ -203,10 +200,10 @@
                     <p class="text-xs text-emerald-100 leading-relaxed mb-4">
                         Tanyakan seputar legalitas ijazah, masa studi paket kesetaraan, maupun kelengkapan berkas Anda.
                     </p>
-                    <a href="https://wa.me/6285864183271?text={{ urlencode('Halo PKBM AL-QUDWAH, saya ingin bertanya mengenai program kesetaraan Paket B / Paket C.') }}"
+                    <a href="https://wa.me/6285722499957?text={{ urlencode('Halo PKBM AL-QUDWAH, saya ingin bertanya mengenai program kesetaraan Paket B / Paket C.') }}"
                        target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition shadow">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Chat WhatsApp (0858-6418-3271)
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Chat WhatsApp (0857-2249-9957)
                     </a>
                 </div>
             </div>

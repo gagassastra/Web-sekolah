@@ -62,7 +62,7 @@
                 <button type="button" onclick="window.print()" class="w-full sm:w-auto px-5 py-3 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-bold text-xs transition flex items-center justify-center gap-2">
                     <i class="fa-solid fa-print"></i> Cetak Bukti Pendaftaran
                 </button>
-                <a href="https://wa.me/6285864183271?text={{ urlencode('Halo PKBM AL-QUDWAH, saya telah mendaftar online dengan nomor pendaftaran: ' . $registration->nomor_pendaftaran . ' atas nama ' . $registration->nama_lengkap) }}"
+                <a href="https://wa.me/6285722499957?text={{ urlencode('Halo PKBM AL-QUDWAH, saya telah mendaftar online dengan nomor pendaftaran: ' . $registration->nomor_pendaftaran . ' atas nama ' . $registration->nama_lengkap) }}"
                    target="_blank" rel="noopener"
                    class="w-full sm:w-auto px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm">
                     <i class="fa-brands fa-whatsapp text-sm"></i> Konfirmasi ke WhatsApp Admin

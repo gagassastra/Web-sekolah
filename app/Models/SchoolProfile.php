@@ -73,4 +73,22 @@ class SchoolProfile extends Model
 
         return str_starts_with($foto, 'http') ? $foto : '/' . ltrim($foto, '/');
     }
+
+    public function getTeleponAttribute(?string $value): string
+    {
+        if (empty($value) || in_array($value, ['085864183271', '0858-6418-3271'], true)) {
+            return '085722499957';
+        }
+
+        return $value;
+    }
+
+    public function getWhatsappAttribute(?string $value): string
+    {
+        if (empty($value) || in_array($value, ['085864183271', '0858-6418-3271'], true)) {
+            return '085722499957';
+        }
+
+        return $value;
+    }
 }

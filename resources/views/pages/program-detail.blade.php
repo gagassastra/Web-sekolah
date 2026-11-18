@@ -99,7 +99,7 @@
                         <a href="{{ route('pendaftaran.index') }}" class="w-full text-center block py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-sm transition">
                             Daftar Sekarang
                         </a>
-                        <a href="https://wa.me/6285864183271?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20mengenai%20{{ urlencode($program->nama) }}" target="_blank" rel="noopener noreferrer" class="w-full text-center block py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition">
+                        <a href="https://wa.me/6285722499957?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20mengenai%20{{ urlencode($program->nama) }}" target="_blank" rel="noopener noreferrer" class="w-full text-center block py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition">
                             Tanya Lewat WhatsApp
                         </a>
                     </div>

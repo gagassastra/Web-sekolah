@@ -27,10 +27,10 @@ return new class extends Migration
             $table->string('kabupaten')->default('Kab. Cianjur');
             $table->string('provinsi')->default('Prov. Jawa Barat');
             $table->string('kode_pos')->default('43263');
-            $table->string('telepon')->default('085864183271');
-            $table->string('whatsapp')->default('085864183271');
+            $table->string('telepon')->default('085722499957');
+            $table->string('whatsapp')->default('085722499957');
             $table->string('email')->default('pkbmalqudwah2022@gmail.com');
-            $table->string('jam_layanan')->default('Senin - Sabtu: 08.00 - 16.00 WIB');
+            $table->string('jam_layanan')->default('Kamis: 13.00 - 16.00 WIB');
             $table->string('kepala_sekolah')->default('Elis Masridah');
             $table->string('foto_kepala')->nullable();
             $table->text('sambutan_kepala')->nullable();

@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Muhammad Gagas S.B, S.T',
                 'password' => Hash::make('password123'),
                 'role' => 'admin',
-                'phone' => '085864183271',
+                'phone' => '085722499957',
                 'avatar' => null,
             ]
         );
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Muhammad Gagas S.B, S.T',
                 'password' => Hash::make('password123'),
                 'role' => 'admin',
-                'phone' => '085864183271',
+                'phone' => '085722499957',
             ]
         );
 
@@ -72,8 +72,8 @@ class DatabaseSeeder extends Seeder
             'kabupaten' => 'Kab. Cianjur',
             'provinsi' => 'Prov. Jawa Barat',
             'kode_pos' => '43263',
-            'telepon' => '085864183271',
-            'whatsapp' => '085864183271',
+            'telepon' => '085722499957',
+            'whatsapp' => '085722499957',
             'email' => 'pkbmalqudwah2022@gmail.com',
             'jam_layanan' => 'Senin s/d Sabtu: 08.00 - 16.00 WIB',
             'kepala_sekolah' => 'Elis Masridah',
@@ -198,7 +198,7 @@ class DatabaseSeeder extends Seeder
                 'tempat_lahir' => 'Cianjur',
                 'tanggal_lahir' => '2003-06-14',
                 'email' => 'gagassastra12345@gmail.com',
-                'no_hp' => '085864183271',
+                'no_hp' => '085722499957',
                 'bio' => 'Pengelola sistem informasi, data pokok pendidikan (Dapodik), teknologi digital, serta wali kelas di PKBM AL QUDWAH.',
                 'foto' => '/images/tutor/dewan-tutor-2.jpg',
                 'urutan' => 2,
@@ -531,7 +531,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => 'penerimaan-warga-belajar-baru-pwbb-paket-b-dan-paket-c-resmi-dibuka',
                 'category' => 'Pengumuman',
                 'summary' => 'PKBM AL-QUDWAH kembali membuka pendaftaran bagi calon warga belajar baru untuk program Paket B (setara SMP) dan Paket C (setara SMA) dengan syarat mudah dan bimbingan fleksibel.',
-                'content' => '<p>Kabar gembira bagi masyarakat luas yang ingin melanjutkan dan menuntaskan pendidikan formal yang sempat tertunda. PKBM AL-QUDWAH mengumumkan pembukaan Penerimaan Warga Belajar Baru (PWBB) untuk Tahun Ajaran berjalan pada program unggulan Pendidikan Kesetaraan Paket B (setara SMP) dan Paket C (setara SMA).</p><p>Pendaftaran terbuka untuk semua kalangan tanpa batas usia. Persyaratan pendaftaran cukup dengan menyerahkan fotokopi ijazah jenjang sebelumnya (SD untuk Paket B, SMP untuk Paket C), fotokopi Kartu Keluarga (KK), KTP/Akta Lahir, dan pas foto terbaru.</p><p>Bagi calon peserta yang berlokasi jauh atau memiliki kesibukan, PKBM AL-QUDWAH juga menyediakan fasilitas pendaftaran online melalui website resmi ini atau menghubungi layanan konsultasi via WhatsApp resmi di 0858-6418-3271.</p>',
+                'content' => '<p>Kabar gembira bagi masyarakat luas yang ingin melanjutkan dan menuntaskan pendidikan formal yang sempat tertunda. PKBM AL-QUDWAH mengumumkan pembukaan Penerimaan Warga Belajar Baru (PWBB) untuk Tahun Ajaran berjalan pada program unggulan Pendidikan Kesetaraan Paket B (setara SMP) dan Paket C (setara SMA).</p><p>Pendaftaran terbuka untuk semua kalangan tanpa batas usia. Persyaratan pendaftaran cukup dengan menyerahkan fotokopi ijazah jenjang sebelumnya (SD untuk Paket B, SMP untuk Paket C), fotokopi Kartu Keluarga (KK), KTP/Akta Lahir, dan pas foto terbaru.</p><p>Bagi calon peserta yang berlokasi jauh atau memiliki kesibukan, PKBM AL-QUDWAH juga menyediakan fasilitas pendaftaran online melalui website resmi ini atau menghubungi layanan konsultasi via WhatsApp resmi di 0857-2249-9957.</p>',
                 'featured_image' => '/images/hero/hero-warga-belajar-tutor.jpg',
                 'author_id' => $admin->id,
                 'views' => 210,

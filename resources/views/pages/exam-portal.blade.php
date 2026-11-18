@@ -145,7 +145,7 @@
                     <p class="text-navy-100 text-xs sm:text-sm">Segera laporkan kepada Tim IT / Operator Sekolah untuk reset sesi atau reset password ujian.</p>
                 </div>
             </div>
-            <a href="https://wa.me/6285864183271?text={{ urlencode('Halo Operator PKBM AL-QUDWAH, saya mengalami kendala pada aplikasi ujian CBT.') }}"
+            <a href="https://wa.me/6285722499957?text={{ urlencode('Halo Operator PKBM AL-QUDWAH, saya mengalami kendala pada aplikasi ujian CBT.') }}"
                target="_blank" rel="noopener"
                class="px-5 py-3 bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shrink-0 shadow">
                 <i class="fa-brands fa-whatsapp text-base"></i> Hubungi Helpdesk IT

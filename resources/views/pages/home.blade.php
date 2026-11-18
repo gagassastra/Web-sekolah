@@ -472,7 +472,7 @@
                 <a href="{{ route('pendaftaran.index') }}" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-bold text-sm bg-white text-blue-950 hover:bg-blue-50 shadow-lg transition">
                     Formulir Pendaftaran Online
                 </a>
-                <a href="https://wa.me/6285864183271?text=Halo%20Admin%20PKBM%20AL-QUDWAH,%20saya%20ingin%20konsultasi%20pendaftaran" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition">
+                <a href="https://wa.me/6285722499957?text=Halo%20Admin%20PKBM%20AL-QUDWAH,%20saya%20ingin%20konsultasi%20pendaftaran" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition">
                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
                     Konsultasi via WhatsApp
                 </a>

@@ -85,4 +85,9 @@ class User extends Authenticatable
 
         return str_starts_with($foto, 'http') ? $foto : '/' . ltrim($foto, '/');
     }
+
+    public function getPhoneAttribute(?string $value): ?string
+    {
+        return in_array($value, ['085864183271', '0858-6418-3271'], true) ? '085722499957' : $value;
+    }
 }

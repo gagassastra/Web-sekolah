@@ -374,7 +374,7 @@
                     <p class="text-slate-600 text-xs sm:text-sm">Hubungi kami melalui WhatsApp untuk informasi seputar jadwal, berkas, dan pendaftaran langsung.</p>
                 </div>
             </div>
-            <a href="https://wa.me/6285864183271?text={{ urlencode('Halo PKBM AL-QUDWAH, saya ingin menanyakan informasi pendaftaran Paket B / Paket C.') }}"
+            <a href="https://wa.me/6285722499957?text={{ urlencode('Halo PKBM AL-QUDWAH, saya ingin menanyakan informasi pendaftaran Paket B / Paket C.') }}"
                target="_blank" rel="noopener"
                class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shrink-0 shadow-md">
                 <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi WhatsApp Resmi
