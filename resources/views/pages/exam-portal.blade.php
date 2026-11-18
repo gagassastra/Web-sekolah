@@ -36,10 +36,14 @@
                         Aplikasi ujian terhubung langsung dengan basis data penilaian akademik PKBM AL-QUDWAH. Peserta didik menggunakan Username / Nomor Peserta dan Password yang diberikan oleh Operator IT/Wali Kelas.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3">
                         <a href="{{ $examUrl }}" target="_blank" rel="noopener"
                            class="px-6 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl text-sm transition shadow-lg shadow-primary-600/30 flex items-center justify-center gap-2">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Aplikasi Ujian CBT
+                        </a>
+                        <a href="{{ $eraportUrl ?? env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                           class="px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-sm transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-signature"></i> Penilaian & E-Raport
                         </a>
                         <a href="{{ route('login') }}"
                            class="px-5 py-3.5 bg-slate-100 hover:bg-slate-200 text-navy-900 font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 border border-slate-300">

@@ -74,6 +74,10 @@ Route::post('/hubungi-kami', [ContactController::class, 'store'])->name('kontak.
 // Portal Ujian CBT Sekolah
 Route::get('/ujian-cbt', [ExamPortalController::class, 'index'])->name('exam.portal');
 
+// Portal Penilaian & E-Raport Sekolah
+Route::get('/e-raport', [ExamPortalController::class, 'eraport'])->name('eraport.portal');
+Route::get('/penilaian-raport', [ExamPortalController::class, 'eraport'])->name('raport.portal');
+
 /*
 |--------------------------------------------------------------------------
 | Fallback Serve Uploaded Files

@@ -167,6 +167,15 @@
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-navy-400"></i>
                     </a>
 
+                    <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                       class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-navy-200 hover:bg-white/5 hover:text-white transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-file-signature w-4 text-center text-emerald-400"></i>
+                            <span>Penilaian & E-Raport</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-navy-400"></i>
+                    </a>
+
                 </nav>
             </div>
 
@@ -227,6 +236,12 @@
                     <a href="{{ env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 px-3.5 py-2 bg-gold-400 hover:bg-gold-500 text-navy-950 text-xs font-bold rounded-xl transition shadow-xs">
                         <i class="fa-solid fa-laptop-code"></i> Ujian CBT
+                    </a>
+
+                    <!-- Direct E-Raport Link button -->
+                    <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow-xs">
+                        <i class="fa-solid fa-file-signature"></i> E-Raport
                     </a>
 
                     <!-- User Initials / Profile -->

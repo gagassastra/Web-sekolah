@@ -24,19 +24,35 @@
                 </p>
             </div>
 
-            <!-- CBT Quick Action Card -->
-            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 shrink-0 flex items-center justify-between sm:justify-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-gold-400/20 text-gold-400 flex items-center justify-center text-xl shrink-0">
-                    <i class="fa-solid fa-laptop-code"></i>
+            <!-- CBT & E-Raport Quick Action Cards -->
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 flex items-center justify-between sm:justify-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-gold-400/20 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[11px] font-semibold text-navy-200">Aplikasi Ujian Sekolah</span>
+                        <span class="block text-sm font-bold text-white">Sistem CBT</span>
+                    </div>
+                    <a href="{{ $examUrl }}" target="_blank" rel="noopener"
+                       class="px-3.5 py-2 bg-gold-400 hover:bg-gold-500 text-navy-950 text-xs font-bold rounded-xl transition shadow">
+                        Buka CBT
+                    </a>
                 </div>
-                <div>
-                    <span class="block text-[11px] font-semibold text-navy-200">Aplikasi Ujian Sekolah</span>
-                    <span class="block text-sm font-bold text-white">Sistem CBT Penilaian</span>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 flex items-center justify-between sm:justify-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-emerald-400/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <div>
+                        <span class="block text-[11px] font-semibold text-navy-200">Penilaian & Hasil Belajar</span>
+                        <span class="block text-sm font-bold text-white">Sistem E-Raport</span>
+                    </div>
+                    <a href="{{ $eraportUrl ?? env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                       class="px-3.5 py-2 bg-emerald-400 hover:bg-emerald-500 text-navy-950 text-xs font-bold rounded-xl transition shadow">
+                        Buka E-Raport
+                    </a>
                 </div>
-                <a href="{{ $examUrl }}" target="_blank" rel="noopener"
-                   class="px-4 py-2 bg-gold-400 hover:bg-gold-500 text-navy-950 text-xs font-bold rounded-xl transition shadow">
-                    Buka Aplikasi
-                </a>
             </div>
         </div>
     </div>

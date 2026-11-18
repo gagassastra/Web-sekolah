@@ -34,13 +34,15 @@ class DashboardController extends Controller
         $recentMessages = ContactMessage::latest()->take(5)->get();
         $recentPosts = Post::latest()->take(4)->get();
         $examUrl = env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/');
+        $eraportUrl = env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/');
 
         return view('admin.dashboard', compact(
             'stats',
             'recentRegistrations',
             'recentMessages',
             'recentPosts',
-            'examUrl'
+            'examUrl',
+            'eraportUrl'
         ));
     }
 }

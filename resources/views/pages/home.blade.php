@@ -70,6 +70,10 @@
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             Aplikasi Ujian CBT
                         </a>
+                        <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-semibold text-sm bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-400/40 transition">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            Penilaian & E-Raport
+                        </a>
                     </div>
                 </div>
 
@@ -288,6 +292,57 @@
                         <div class="w-10 h-10 mx-auto rounded-full bg-amber-500 text-white font-bold flex items-center justify-center text-sm shadow">4</div>
                         <h4 class="font-bold text-sm text-blue-950">Asesmen & Penerimaan Ijazah</h4>
                         <p class="text-xs text-slate-500">Evaluasi pembelajaran dan penerbitan ijazah sah bernomor seri nasional untuk kuliah/kerja.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PORTAL LAYANAN AKADEMIK DIGITAL (CBT & E-RAPORT) -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card Ujian CBT -->
+                <div class="bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl p-6 sm:p-8 text-white shadow-lg border border-slate-800 flex flex-col justify-between gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 border border-amber-400/30 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="space-y-1.5">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Evaluasi Akademik</span>
+                            <h3 class="text-lg sm:text-xl font-extrabold text-white">Portal Aplikasi Ujian CBT</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Sistem ujian berbasis komputer (Computer-Based Testing) bagi peserta didik Paket B & Paket C serta pengelolaan bank soal tutor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                        <span class="text-[11px] font-mono text-slate-400">sistem-ujian.pkbmalqudwah.id</span>
+                        <a href="{{ env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition shadow">
+                            <span>Masuk Ujian CBT</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Penilaian & E-Raport -->
+                <div class="bg-gradient-to-br from-slate-900 to-emerald-950 rounded-2xl p-6 sm:p-8 text-white shadow-lg border border-emerald-900/60 flex flex-col justify-between gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <div class="space-y-1.5">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Laporan Hasil Belajar</span>
+                            <h3 class="text-lg sm:text-xl font-extrabold text-white">Sistem Penilaian & E-Raport</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Portal pengelolaan nilai akademik, capaian kompetensi kurikulum kesetaraan, dan pencetakan raport resmi warga belajar PKBM AL-QUDWAH.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                        <span class="text-[11px] font-mono text-slate-400">e-raport.pkbmalqudwah.id</span>
+                        <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition shadow">
+                            <span>Buka E-Raport</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
             </div>

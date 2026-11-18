@@ -58,6 +58,11 @@
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     <span>Aplikasi Ujian CBT</span>
                 </a>
+                <span class="text-slate-700">|</span>
+                <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="inline-flex items-center space-x-1 text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Penilaian & E-Raport</span>
+                </a>
             </div>
         </div>
     </div>
@@ -104,6 +109,10 @@
                     </a>
                     <a href="{{ route('contact.index') }}" class="px-3 py-2 rounded-lg transition {{ request()->routeIs('contact.index') ? 'text-blue-700 font-bold bg-blue-50' : 'hover:text-blue-700 hover:bg-slate-50' }}">
                         Kontak
+                    </a>
+                    <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="px-3 py-2 rounded-lg transition text-emerald-700 hover:text-emerald-800 hover:bg-emerald-50 flex items-center gap-1">
+                        <span>E-Raport</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
                 </nav>
 
@@ -166,6 +175,10 @@
             <a href="{{ env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="block px-3 py-2.5 rounded-lg text-base font-medium text-amber-700 bg-amber-50 hover:bg-amber-100 flex items-center justify-between">
                 <span>Aplikasi Ujian CBT Siswa & Guru</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-600"></i>
+            </a>
+            <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="block px-3 py-2.5 rounded-lg text-base font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 flex items-center justify-between">
+                <span>Penilaian & E-Raport Siswa</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-emerald-600"></i>
             </a>
             <div class="pt-4 border-t border-slate-100 flex flex-col space-y-2">
                 <a href="{{ route('pendaftaran.index') }}" class="w-full text-center py-2.5 px-4 rounded-lg bg-blue-600 text-white font-semibold">
@@ -256,6 +269,12 @@
                             <a href="{{ env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center space-x-2">
                                 <span class="text-amber-400 font-bold">›</span>
                                 <span>Aplikasi Ujian CBT (sistem-ujian.pkbmalqudwah.id)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener" class="hover:text-emerald-400 transition flex items-center space-x-2">
+                                <span class="text-emerald-400 font-bold">›</span>
+                                <span>Penilaian & E-Raport (e-raport.pkbmalqudwah.id)</span>
                             </a>
                         </li>
                     </ul>

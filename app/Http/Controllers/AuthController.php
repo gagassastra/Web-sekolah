@@ -14,7 +14,8 @@ class AuthController extends Controller
         }
 
         $examUrl = env('EXAM_APP_URL', 'https://sistem-ujian.pkbmalqudwah.id/');
-        return view('auth.login', compact('examUrl'));
+        $eraportUrl = env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/');
+        return view('auth.login', compact('examUrl', 'eraportUrl'));
     }
 
     public function login(Request $request)

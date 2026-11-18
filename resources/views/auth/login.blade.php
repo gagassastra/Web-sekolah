@@ -55,13 +55,19 @@
                 </div>
             </div>
 
-            <!-- Portal Ujian Quick Link -->
-            <div class="relative z-10 pt-6 mt-6 border-t border-white/10">
-                <p class="text-[11px] text-navy-200 mb-2">Ingin membuka ruang ujian CBT siswa?</p>
-                <a href="{{ $examUrl }}" target="_blank" rel="noopener"
-                   class="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:text-gold-300 transition">
-                    <i class="fa-solid fa-laptop-code"></i> Menuju Aplikasi Ujian CBT <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
+            <!-- Portal Ujian & E-Raport Quick Links -->
+            <div class="relative z-10 pt-6 mt-6 border-t border-white/10 space-y-2.5">
+                <p class="text-[11px] text-navy-200">Layanan Akademik Digital Siswa & Tutor:</p>
+                <div class="flex flex-col gap-2">
+                    <a href="{{ $examUrl }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:text-gold-300 transition">
+                        <i class="fa-solid fa-laptop-code w-4"></i> Menuju Aplikasi Ujian CBT <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <a href="{{ $eraportUrl ?? env('ERAPORT_APP_URL', 'https://e-raport.pkbmalqudwah.id/') }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition">
+                        <i class="fa-solid fa-file-signature w-4"></i> Menuju Penilaian & E-Raport <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
